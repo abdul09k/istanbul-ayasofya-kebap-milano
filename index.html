@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebap Pizza Istanbul Ayasofya | Milano</title>
+    <style>
+        :root {
+            --primary: #c8102e;
+            --secondary: #ffd700;
+            --dark: #1a1a1a;
+            --light: #f8f5f0;
+            --accent: #2c3e50;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: var(--light);
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), #8b0000);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        .logo span { color: white; font-size: 0.9rem; display: block; }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imagine_images/DdgKS.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .btn:hover { transform: translateY(-3px); background: #ffed4e; }
+        section { padding: 5rem 0; }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+        .about { background: white; }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .about img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .menu-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .menu-card:hover { transform: translateY(-10px); }
+        .menu-card img { width: 100%; height: 200px; object-fit: cover; }
+        .menu-card h3 { padding: 1rem 1.5rem 0.5rem; color: var(--primary); }
+        .menu-card p { padding: 0 1.5rem 1.5rem; }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover { transform: scale(1.05); }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        .hours, .contact { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .hours h3, .contact h3 { color: var(--primary); margin-bottom: 1rem; }
+        .hours li { list-style: none; padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            .about-grid, .info-grid { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2.5rem; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">AYASOFYA<span>Kebap Pizza Istanbul</span></div>
+                <ul>
+                    <li><a href="#about">Chi Siamo</a></li>
+                    <li><a href="#menu">Menù</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#info">Orari & Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Kebap Pizza Istanbul Ayasofya</h1>
+            <p>Autentici sapori turchi nel cuore di Milano. Döner fresco, pizza kebab e specialità halal vicino al Castello Sforzesco.</p>
+            <a href="#menu" class="btn">Scopri il Menù</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Chi Siamo</h2>
+            <div class="about-grid">
+                <div>
+                    <p>Benvenuti da <strong>Istanbul Ayasofya Kebap Pizza</strong>, il punto di riferimento per chi cerca autentica cucina turca a Milano.</p>
+                    <p>Situati in <strong>Via Manfredo Camperio 17</strong>, a due passi dal Castello Sforzesco, prepariamo ogni giorno kebab con carne fresca di prima qualità, tagliata al momento dal nostro spiedo verticale.</p>
+                    <p>Offriamo panini, piadine, piatti completi, pizza kebab, falafel per i vegetariani e grigliate di agnello e vitello. Tutto certificato <strong>Halal</strong>.</p>
+                    <p>Porzioni generose, prezzi onesti e servizio amichevole. Ideale per pranzo, cena o spuntino notturno!</p>
+                </div>
+                <img src="imagine_images/b3FVd.jpg" alt="Interno del ristorante Istanbul Ayasofya">
+            </div>
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="container">
+            <h2 class="section-title">I Nostri Piatti</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="imagine_images/NeIDS.jpg" alt="Döner Kebab">
+                    <h3>Döner Kebab</h3>
+                    <p>Panino, piadina o piatto con carne fresca, insalata croccante e salse speciali. Il classico che non delude mai.</p>
+                </div>
+                <div class="menu-card">
+                    <img src="imagine_images/78eX3.jpg" alt="Pizza Kebab">
+                    <h3>Pizza Kebab</h3>
+                    <p>La fusione perfetta: impasto italiano con döner, mozzarella, verdure e spezie turche. Una specialità della casa!</p>
+                </div>
+                <div class="menu-card">
+                    <img src="imagine_images/WGFbB.jpg" alt="Baklava">
+                    <h3>Baklava & Dolci</h3>
+                    <p>Termina il pasto con il nostro baklava al pistacchio o altri dolci tradizionali turchi.</p>
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:2rem; font-style:italic;">Altri piatti: Falafel, Grigliata di Agnello, Spiedini di Vitello, Lahmacun e molto altro. Chiedi al personale!</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery">
+                <img src="imagine_images/NeIDS.jpg" alt="Kebab fresco">
+                <img src="imagine_images/78eX3.jpg" alt="Pizza Kebab fumante">
+                <img src="imagine_images/WGFbB.jpg" alt="Baklava">
+                <img src="imagine_images/b3FVd.jpg" alt="Atmosfera del locale">
+            </div>
+        </div>
+    </section>
+
+    <section id="info">
+        <div class="container">
+            <h2 class="section-title">Orari & Contatti</h2>
+            <div class="info-grid">
+                <div class="hours">
+                    <h3>Orari di Apertura</h3>
+                    <ul>
+                        <li>Lunedì - Giovedì: 11:00 - 01:00</li>
+                        <li>Venerdì - Sabato: 11:00 - 01:30</li>
+                        <li>Domenica: 11:00 - 01:00</li>
+                    </ul>
+                    <p style="margin-top:1rem;"><em>Aperto fino a tardi tutti i giorni. Ideale dopo una passeggiata al Castello!</em></p>
+                </div>
+                <div class="contact">
+                    <h3>Dove Siamo</h3>
+                    <p><strong>Indirizzo:</strong><br>Via Manfredo Camperio, 17<br>20123 Milano MI, Italia</p>
+                    <p><strong>Telefono:</strong><br><a href="tel:+393202345235">+39 320 234 5235</a></p>
+                    <p><strong>Email:</strong><br>istanbulayasofyacamperio@gmail.com</p>
+                    <p><strong>Servizi:</strong> Dine-in, Asporto, Tavolini esterni, Halal</p>
+                    <p style="margin-top:1rem;"><a href="https://maps.google.com/?q=Via+Manfredo+Camperio+17+Milano" target="_blank" class="btn">Apri in Google Maps</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Kebap Pizza Istanbul Ayasofya - Milano. Tutti i diritti riservati.</p>
+            <p>Autentica cucina turca nel cuore di Milano</p>
+        </div>
+    </footer>
+</body>
+</html>
